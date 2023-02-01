@@ -1,6 +1,6 @@
 // Load mongoose
 const mongoose = require('mongoose');
-
+console.log(mongoose)
 // Connect to the database
 mongoose.connect(
     process.env.CONNECTION_STRING, // Retrieve connection string
