@@ -14,7 +14,7 @@ async function main() {
 async function loadTasks() {
     try {
         // Uses fetch to call server
-        const response = await fetch('/api/tasks/index.js');
+        const response = await fetch('/api/newTask');
         // Reads returned JSON, which contains one property called tasks
         const retrievedData = await response.json();
         // Retrieve tasks, which contains an array of all tasks in database
