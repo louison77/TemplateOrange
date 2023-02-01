@@ -14,7 +14,7 @@ async function main() {
 async function loadTasks() {
     try {
         // Uses fetch to call server
-        const response = await fetch('/api/tasks');
+        const response = await fetch('../api/tasks');
         // Reads returned JSON, which contains one property called tasks
         const retrievedData = await response.json();
         // Retrieve tasks, which contains an array of all tasks in database
@@ -23,7 +23,7 @@ async function loadTasks() {
         for (let task of retrievedTasks) {
             // Add each task to the array
             tasks.push(task);
-        }    
+        }
     } catch {
         // If there is an error, display a generic message on the page
         const messageElement = document.createElement('li');
@@ -59,7 +59,7 @@ function addTaskToDisplay(task) {
     taskCompleteCheckbox.addEventListener('change', updateTask);
     // Add checkbox to li created earlier
     taskElement.appendChild(taskCompleteCheckbox);
-    
+
     // Create label for the task
     const taskLabel = document.createElement('label');
     // Set the for attribute so the checkbox is toggled when the label is clicked
